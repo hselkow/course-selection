@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High School Class Planner</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <div class="selection-tool">
+      <h2>Select Your Preferences</h2>
+      <form>
+        <label for="major-select">Desired Major:</label>
+        <select id="major-select">
+          <option value="engineering">Engineering</option>
+          <option value="business">Business</option>
+          <option value="finance">Finance</option>
+          <option value="math">Math</option>
+          <option value="physics">Physics</option>
+          <option value="biology">Biology</option>
+          <option value="history">History</option>
+          <option value="linguistics">Linguistics</option>
+        </select>
+
+        <label>  8th Grade Math Course:</label>
+        <div class="radio-group">
+          <div>
+            <input type="radio" name="math-course" id="math-8" value="math-8">
+            <label for="math-8">Math 8</label>
+          </div>
+          <div>
+            <input type="radio" name="math-course" id="algebra-1" value="algebra-1">
+            <label for="algebra-1">Algebra I</label>
+          </div>
+          <div>
+            <input type="radio" name="math-course" id="honors-geometry" value="honors-geometry">
+            <label for="honors-geometry">Honors Geometry</label>
+          </div>
+        </div>
+
+        <label for="difficulty-slider">Intended Difficulty:</label>
+        <input type="range" id="difficulty-slider" min="1" max="10" value="5">
+        <span class="slider-value"></span>
+
+        <button type="submit" id="update-button">Generate Plan</button>
+
+
+
+
+      </form>
+    </div>
+
+    <div class="four-year-plan">
+      <h2>Your Four-Year Plan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Classes</th>
+          </tr>
+        </thead>
+        
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
